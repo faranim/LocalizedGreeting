@@ -10,8 +10,8 @@ public class LocalizedGreeting {
         System.out.println("1. English");
         System.out.println("2. French");
         System.out.println("3. Spanish");
-        System.out.println("4. japanese");
-        System.out.println("5. Persian");
+        System.out.println("4. Japanese");
+        System.out.println("5. Farsi");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -41,7 +41,7 @@ public class LocalizedGreeting {
         }
 
         // Load the resource bundle for the selected locale
-        ResourceBundle messages = ResourceBundle.getBundle("resources.MessagesBundle", locale);
+        ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
 
         // Display the localized greeting message
         System.out.println(messages.getString("greeting"));
@@ -49,5 +49,3 @@ public class LocalizedGreeting {
         scanner.close();
     }
 }
-
-
